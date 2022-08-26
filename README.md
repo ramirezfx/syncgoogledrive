@@ -29,3 +29,13 @@ Assuming your REMOTE is GoogleDrive and your Local Directory is /home/user/Googl
 ## Do an initial bi-directional sync:
 
 `rclone bisync REMOTE:PATH LOCALDIR --drive-skip-gdocs --resync`
+
+Once the initial bi-directional sync is working, you can sync it now with this command:
+
+`rclone bisync REMOTE:PATH LOCALDIR --drive-skip-gdocs`
+
+## Set up executing on wake up from sleep
+
+Naviate to the directory /lib/systemd/system-sleep by typing:
+
+`cd /lib/systemd/system-sleep`
