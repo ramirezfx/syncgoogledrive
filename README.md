@@ -6,7 +6,25 @@ Install GIT
 
 `sudo apt-get install git`
 
+Clone this repo:
 
+`git clone https://github.com/ramirezfx/syncgoogledrive.git`
+
+Navigate to the local repo:
+
+`cd syncgoogledrive`
+
+Make the file executable:
+
+`chmod 700 syncgoogledrive.sh`
+
+Make a bin-folder inside your home-directory (Replace USERNAME with your username)
+
+`mkdir ~/bin`
+
+Copy the sync-file to the bin-directory:
+
+`cp syncgoogledrive.sh ~/bin`
 
 ## Download the latest version of rclone and install it
 
