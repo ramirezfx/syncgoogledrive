@@ -22,7 +22,7 @@ You can list your remote by this command:
 Example:
 Assuming your REMOTE is GoogleDrive and your Local Directory is /home/user/Google
 
-`rclone sync GoogleDrive:/ /home/user/Google`
+`rclone sync GoogleDrive:/ /home/user/Google --drive-skip-gdocs`
 
 (Notice that we sync the complete Google-Drive with GoogleDrive:/ - If you use for example only the directory TEST of your Google drive use GoogleDrive:/TEST instead)
 
