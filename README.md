@@ -17,7 +17,7 @@ You can list your remote by this command:
 
 ## Do an initial sync to your local directory:
 
-`rclone sync REMOTE:PATH LOCALDIR`
+`rclone sync REMOTE:PATH LOCALDIR --drive-skip-gdocs`
 
 Example:
 Assuming your REMOTE is GoogleDrive and your Local Directory is /home/user/Google
@@ -26,3 +26,6 @@ Assuming your REMOTE is GoogleDrive and your Local Directory is /home/user/Googl
 
 (Notice that we sync the complete Google-Drive with GoogleDrive:/ - If you use for example only the directory TEST of your Google drive use GoogleDrive:/TEST instead)
 
+## Do an initial bi-directional sync:
+
+`rclone bisync REMOTE:PATH LOCALDIR --drive-skip-gdocs --resync`
