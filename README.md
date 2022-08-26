@@ -37,11 +37,11 @@ Once the initial bi-directional sync is working, you can sync it now with this c
 
 ## Set up executing hourly-sync
 
-Create the file for sync:
+Create the file for sync (Replace USERNAME with your username):
 
 `echo '#!/bin/sh' > syncgoogledrive.sh`
 
-`echo "/usr/sbin/runuser -l lorenzomueller -c '/home/lorenzomueller/bin/syncgoogledrive.sh'" >> syncgoogledrive.sh`
+`echo "/usr/sbin/runuser -l USERNAME -c '/home/USERNAME/bin/syncgoogledrive.sh'" >> syncgoogledrive.sh`
 
 Change the ownership of the file to root:
 
@@ -65,7 +65,7 @@ Naviate to the directory /lib/systemd/system-sleep by typing:
 
 `cd /lib/systemd/system-sleep`
 
-Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAME with your username and YOURHOMEDIR with the path to your home-directory:
+Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAME with your username:
 
 `sudo echo '!/bin/sh' > 99syncdrive.sh`
 
@@ -73,7 +73,7 @@ Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAM
 
 `sudo echo 'post)' >> 99syncdrive.sh`
 
-`sudo echo "runuser -l USERNAME -c '/home/YOURHOMEDIR/bin/syncgoogledrive.sh'" >> 99syncdrive.sh`
+`sudo echo "runuser -l USERNAME -c '/home/USERNAME/bin/syncgoogledrive.sh'" >> 99syncdrive.sh`
 
 `sudo echo ';;' >> 99syncdrive.sh`
 
