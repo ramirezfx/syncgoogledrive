@@ -1,4 +1,5 @@
 # syncgoogledrive
+This script will sync your google drive with a local folder at your HDD hourly or when your PC wakes up from sleep-mode
 
 ## Download the latest version of rclone and install it
 
