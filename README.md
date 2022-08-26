@@ -121,3 +121,7 @@ Make the file executable:
 
 
 `sudo chmod a+x 99syncdrive.sh`
+
+Move the file to the directory /lib/systemd/system-sleep
+
+`sudo mv 99syncdrive.sh /lib/systemd/system-sleep`
