@@ -92,17 +92,17 @@ Naviate to the directory /lib/systemd/system-sleep by typing:
 
 Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAME with your username:
 
-`sudo echo '!/bin/sh' > 99syncdrive.sh`
+`echo '!/bin/sh' > 99syncdrive.sh`
 
-`sudo echo 'case $1 in' >> 99syncdrive.sh`
+`echo 'case $1 in' >> 99syncdrive.sh`
 
-`sudo echo 'post)' >> 99syncdrive.sh`
+`echo 'post)' >> 99syncdrive.sh`
 
 `USERNAME=$(whoami);HOMEDIR=$(echo ~);sudo echo runuser -l $USERNAME -c $HOMEDIR/bin/syncgoogledrive.sh >> 99syncdrive.sh`
 
-`sudo echo ';;' >> 99syncdrive.sh`
+`echo ';;' >> 99syncdrive.sh`
 
-`sudo echo 'esac' >> 99syncdrive.sh`
+`echo 'esac' >> 99syncdrive.sh`
 
 
 Change the owner of the file to root:
