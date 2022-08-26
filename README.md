@@ -1,5 +1,6 @@
 # syncgoogledrive
 This script will sync your google drive with a local folder at your HDD hourly or when your PC wakes up from sleep-mode
+Note: The Howto below must be executed as user and NOT as root!
 
 ## Clone this repo
 Install GIT
@@ -86,11 +87,7 @@ Move the file to the hourly cron to sync hourly:
 
 ## Set up executing sync on wake up from sleep
 
-Naviate to the directory /lib/systemd/system-sleep by typing:
-
-`cd /lib/systemd/system-sleep`
-
-Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAME with your username:
+Create the file 99syncdrive.sh with the sync commands by typing:
 
 `echo '!/bin/sh' > 99syncdrive.sh`
 
