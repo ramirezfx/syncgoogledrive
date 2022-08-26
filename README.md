@@ -61,3 +61,7 @@ Change the owner of the file to root:
 Change the group of the file to root:
 
 `sudo chgrp root 99syncdrive.sh`
+
+Make the file executable:
+
+`sudo chmod a+x 99syncdrive.sh`
