@@ -1,6 +1,13 @@
 # syncgoogledrive
 This script will sync your google drive with a local folder at your HDD hourly or when your PC wakes up from sleep-mode
 
+## Clone this repo
+Install GIT
+
+`sudo apt-get install git`
+
+
+
 ## Download the latest version of rclone and install it
 
 Download-Link:
