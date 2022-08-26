@@ -42,14 +42,14 @@ Naviate to the directory /lib/systemd/system-sleep by typing:
 
 Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAME with your username and YOURHOMEDIR with the path to your home-directory:
 
-`echo #!/bin/sh > 99syncdrive.sh`
+`echo "#!/bin/sh" > 99syncdrive.sh`
 
-`echo case $1 in >> 99syncdrive.sh`
+`echo "case $1 in" >> 99syncdrive.sh`
 
-`echo post) >> 99syncdrive.sh`
+`echo "post)" >> 99syncdrive.sh`
 
-`echo runuser -l USERNAME -c '/home/YOURHOMEDIR/bin/syncgoogledrive.sh' >> 99syncdir.sh`
+`echo "runuser -l USERNAME -c '/home/YOURHOMEDIR/bin/syncgoogledrive.sh'" >> 99syncdir.sh`
 
-`echo ;; >> 99syncdrive.sh`
+`echo ";;" >> 99syncdrive.sh`
 
-`echo esac >> 99syncdrive`
+`echo "esac" >> 99syncdrive`
