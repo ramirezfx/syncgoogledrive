@@ -52,4 +52,4 @@ Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAM
 
 `echo ";;" >> 99syncdrive.sh`
 
-`echo "esac" >> 99syncdrive`
+`echo "esac" >> 99syncdrive.sh`
