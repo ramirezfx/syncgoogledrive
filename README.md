@@ -91,11 +91,11 @@ Create the file 99syncdrive.sh with the sync commands by typing:
 
 `echo '!/bin/sh' > 99syncdrive.sh`
 
-`echo 'case $1 in' >> 99syncdrive.sh`
+`echo 'case $1/$2 in' >> 99syncdrive.sh`
 
-`echo 'post)' >> 99syncdrive.sh`
+`echo 'post/*)' >> 99syncdrive.sh`
 
-`USERNAME=$(whoami);HOMEDIR=$(echo ~);sudo echo runuser -l $USERNAME -c $HOMEDIR/bin/syncgoogledrive.sh >> 99syncdrive.sh`
+`USERNAME=$(whoami);HOMEDIR=$(echo ~);sudo echo runuser -l $USERNAME -c "'"$HOMEDIR/bin/syncgoogledrive.sh"'" >> 99syncdrive.sh`
 
 `echo ';;' >> 99syncdrive.sh`
 
