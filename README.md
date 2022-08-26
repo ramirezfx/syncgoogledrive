@@ -11,7 +11,7 @@ https://downloads.rclone.org/rclone-current-linux-amd64.deb
 
 `rclone config`
 
-You can list your remote by this command:
+You can list your remote(s) by this command:
 
 `rclone listremotes`
 
