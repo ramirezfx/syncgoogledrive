@@ -35,7 +35,31 @@ Once the initial bi-directional sync is working, you can sync it now with this c
 
 `rclone bisync REMOTE:PATH LOCALDIR --drive-skip-gdocs`
 
-## Set up executing on wake up from sleep
+## Set up executing hourly-sync
+
+Create the file for sync:
+
+`echo '#!/bin/sh' > syncgoogledrive.sh`
+
+`echo "/usr/sbin/runuser -l lorenzomueller -c '/home/lorenzomueller/bin/syncgoogledrive.sh'" >> syncgoogledrive.sh`
+
+Change the ownership of the file to root:
+
+`sudo chown root syncgoogledrive.sh`
+
+Change the group to root:
+
+`sudo chgrp root syncgoogledrive.sh`
+
+Make the file executable:
+
+`sudo chmod a+x syncgoogledrive.sh`
+
+Move the file to the hourly cron to sync hourly:
+
+`sudo mv syncgoogledrive.sh /etc/cron.hourly`
+
+## Set up executing sync on wake up from sleep
 
 Naviate to the directory /lib/systemd/system-sleep by typing:
 
