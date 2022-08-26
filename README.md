@@ -60,4 +60,4 @@ Change the owner of the file to root:
 
 Change the group of the file to root:
 
-`sudo chgrp root`
+`sudo chgrp root 99syncdrive.sh`
