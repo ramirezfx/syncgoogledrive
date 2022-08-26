@@ -98,7 +98,7 @@ Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAM
 
 `sudo echo 'post)' >> 99syncdrive.sh`
 
-`sudo echo "runuser -l USERNAME -c '/home/USERNAME/bin/syncgoogledrive.sh'" >> 99syncdrive.sh`
+`USERNAME=$(whoami);HOMEDIR=$(echo ~);sudo echo runuser -l $USERNAME -c $HOMEDIR/bin/syncgoogledrive.sh >> 99syncdrive.sh`
 
 `sudo echo ';;' >> 99syncdrive.sh`
 
