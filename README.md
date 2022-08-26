@@ -48,7 +48,7 @@ Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAM
 
 `echo "post)" >> 99syncdrive.sh`
 
-`echo "runuser -l USERNAME -c '/home/YOURHOMEDIR/bin/syncgoogledrive.sh'" >> 99syncdir.sh`
+`echo "runuser -l USERNAME -c '/home/YOURHOMEDIR/bin/syncgoogledrive.sh'" >> 99syncdrive.sh`
 
 `echo ";;" >> 99syncdrive.sh`
 
