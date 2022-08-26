@@ -62,11 +62,11 @@ Once the initial bi-directional sync is working, you can sync it now with this c
 
 ## Set up executing hourly-sync
 
-Create the file for sync (Replace USERNAME with your username):
+Create the file for sync:
 
 `echo '#!/bin/sh' > syncgoogledrive.sh`
 
-`echo "/usr/sbin/runuser -l USERNAME -c '/home/USERNAME/bin/syncgoogledrive.sh'" >> syncgoogledrive.sh`
+`USERNAME=$(whoami);HOMEDIR=$(echo ~); echo /usr/sbin/runuser -l $USERNAME -c $HOMEDIR/bin/syncgoogledrive.sh >> syncgoogledrive.sh`
 
 Change the ownership of the file to root:
 
