@@ -89,7 +89,7 @@ Move the file to the hourly cron to sync hourly:
 
 Create the file 99syncdrive.sh with the sync commands by typing:
 
-`echo '!/bin/sh' > 99syncdrive.sh`
+`echo '#!/bin/sh' > 99syncdrive.sh`
 
 `echo 'case $1/$2 in' >> 99syncdrive.sh`
 
