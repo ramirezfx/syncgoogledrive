@@ -54,14 +54,20 @@ Create the file 99syncdrive.sh with the sync commands by typing (Replace USERNAM
 
 `sudo echo 'esac' >> 99syncdrive.sh`
 
+
 Change the owner of the file to root:
+
 
 `sudo chown root 99syncdrive.sh`
 
+
 Change the group of the file to root:
+
 
 `sudo chgrp root 99syncdrive.sh`
 
+
 Make the file executable:
+
 
 `sudo chmod a+x 99syncdrive.sh`
