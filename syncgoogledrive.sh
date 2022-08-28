@@ -1,9 +1,11 @@
 #!/bin/bash
-if pidof "rclone" >/dev/null; then
+LOCKFILE=/home/lorenzomueller/bin/googlesync.lock
+REMOTEDIR=GoogleDrive
+LOCALDIR=/home/lorenzomueller/GoogleDrive
+if test -f "$LOCKFILE"; then
  echo "Sicherung läuft bereits"
 else
-
- /usr/bin/rclone bisync GoogleDrive:/ /home/lorenzomueller/GoogleDrive/ --drive-skip-gdocs
-
-# /usr/bin/rclone sync GoogleDrive:/ /home/lorenzomueller/GoogleDrive/
+touch $LOCKFILE
+ /usr/bin/rclone bisync $REMOTEDIR:/ $LOCALDIR --drive-skip-gdocs
+rm $LOCKFILE
 fi
