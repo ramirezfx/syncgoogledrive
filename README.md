@@ -27,6 +27,12 @@ Copy the sync-file to the bin-directory:
 
 `cp syncgoogledrive.sh ~/bin`
 
+Open the file ~/syncgoogledrive.sh with your favourite editor and fill in all needed variables:
+
+LOCALSYNCPATH (Your local files to be synced - Example /home/user/Google
+REMOTE (The name your your remote - Example: GoogleDrive: - You can list your remotes by typing rclone listremotes)
+REMOTEPATH (The path to be synced on the remote - Example / - This will sync your entire Google-Drive)
+
 ## Download/Intsall all needed software:
 
 Rclone Download-Link:
