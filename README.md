@@ -27,12 +27,15 @@ Copy the sync-file to the bin-directory:
 
 `cp syncgoogledrive.sh ~/bin`
 
-## Download the latest version of rclone and install it
+## Download/Intsall all needed software:
 
-Download-Link:
+Rclone Download-Link:
 https://downloads.rclone.org/
 If you use debian-based distribution use can use this direct link to the latest-version:
 https://downloads.rclone.org/rclone-current-linux-amd64.deb
+
+Install Inotify-Tools and Screen:
+`sudo apt-get install inotify-tools screen`
 
 ## Set up the connection to your Google-Drive:
 
