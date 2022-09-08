@@ -73,64 +73,10 @@ Once the initial bi-directional sync is working, you can sync it now with this c
 
 `rclone bisync REMOTE:PATH LOCALDIR --drive-skip-gdocs`
 
-## Set up executing hourly-sync
 
-Create the file for sync:
+## Adding to startup
 
-`echo '#!/bin/sh' > syncgoogledrive.sh`
+Look at your distro`s documentation where to setup the startup commands.
+For startup-command of the script type in the command (Assuming /home/user/bin/syncgoogledrive.sh is the path to this script):
 
-`USERNAME=$(whoami);HOMEDIR=$(echo ~); echo /usr/sbin/runuser -l $USERNAME -c $HOMEDIR/bin/syncgoogledrive.sh >> syncgoogledrive.sh`
-
-Change the ownership of the file to root:
-
-`sudo chown root syncgoogledrive.sh`
-
-Change the group to root:
-
-`sudo chgrp root syncgoogledrive.sh`
-
-Make the file executable:
-
-`sudo chmod a+x syncgoogledrive.sh`
-
-Move the file to the hourly cron to sync hourly:
-
-`sudo mv syncgoogledrive.sh /etc/cron.hourly`
-
-## Set up executing sync on wake up from sleep
-
-Create the file 99syncdrive.sh with the sync commands by typing:
-
-`echo '#!/bin/sh' > 99syncdrive.sh`
-
-`echo 'case $1/$2 in' >> 99syncdrive.sh`
-
-`echo 'post/*)' >> 99syncdrive.sh`
-
-`USERNAME=$(whoami);HOMEDIR=$(echo ~);sudo echo /usr/sbin/runuser -l $USERNAME -c "'"$HOMEDIR/bin/syncgoogledrive.sh"'" >> 99syncdrive.sh`
-
-`echo ';;' >> 99syncdrive.sh`
-
-`echo 'esac' >> 99syncdrive.sh`
-
-
-Change the owner of the file to root:
-
-
-`sudo chown root 99syncdrive.sh`
-
-
-Change the group of the file to root:
-
-
-`sudo chgrp root 99syncdrive.sh`
-
-
-Make the file executable:
-
-
-`sudo chmod a+x 99syncdrive.sh`
-
-Move the file to the directory /lib/systemd/system-sleep
-
-`sudo mv 99syncdrive.sh /lib/systemd/system-sleep`
+`bash -c "screen -S SyncGoogleDrive -dm bash /home/user/bin/syncgoogledrive.sh"`
