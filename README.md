@@ -1,5 +1,5 @@
 # syncgoogledrive
-This script will sync your google drive with a local folder at your HDD hourly or when your PC wakes up from sleep-mode
+This script will sync your google drive with a local folder at your HDD every time the content of the synced folder changes
 Note: The Howto below must be executed as USER and NOT as root!
 
 ## Clone this repo
